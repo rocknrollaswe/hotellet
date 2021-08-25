@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hotellet</title>
+</head>
+<body>
+    <header class="header">
+        <h1>Välkommen till <br> hotell Björnen!</h1>
+    </header>
+    <section class="greeting">
+        <p>Vad roligt att valt att stanna hos oss!</p>
+        <p>Innan du kan checka in ber vi dig att fylla i vårt gästformulär:</p>
+    </section>
+   
+    <form action="" method="post">
+
+        <fieldset class="person">
+            <legend>Gästuppgifter</legend>
+            <label for="name">Förnamn:</label><br>
+            <input type="text" id="name" name="name"> <br>
+            <label for="surname">Efternamn:</label><br>
+            <input type="text" id="surname" name="surname"><br>
+            <label for="name">Adress:</label><br>
+            <input type="text" id="adress" name="adress"> <br>
+            <label for="postalcode">Postnr:</label><br>
+            <input type="text" id="postalcode" name="postalcode"> <br>
+            <label for="name">Email:</label><br>
+            <input type="email" id="email" name="email"> <br>
+            <label for="name">Telefonnummer:</label><br>
+            
+            <input type="tel" id="phonenumber" name="phonenumber" 
+            placeholder="0000-00-00-00" 
+            pattern="[0-9]{4}[0-9]{2}[0-9]{2}[0-9]{2}"> <br>   
+        </fieldset><br>
+        
+        
+        <fieldset>
+            <legend>Vistelse</legend>
+            <label for="arrivaldate">När anländer du/ni?</label><br>
+            <input type="date" id="arrivaldate" name="arrivaldate"  onchange="SetLimitForDeparture(this.value)"><br>
+            <label for="departuredate">När planerar du/ni att lämna oss?</label><br>
+            <input type="date" id="departuredate" name="departuredate"> <br><br>
+            <label for="guest_amount">Hur många gäster blir ni totalt?</label><br>
+            <input type="number" id="guest_amount" name="guest_amount" min="1" max="10"> <br><br>    
+            
+        
+            <label for="food">Hur vill du/ni äta under er vistelse?</label><br>
+            <input type="checkbox" name="meal1" id="breakfast" value="Breakfast">
+            <label for="breakfast">Frukost</label> <br>
+            <input type="checkbox" name="meal2" id="lunch" value="Lunch">
+            <label for="lunch">Lunch</label><br> 
+            <input type="checkbox" name="meal3" id="dinner" value="Dinner">
+            <label for="dinner">Middag</label><br><br>
+            <label for="rental" name="rental">Vill du/ni hyra bil?</label>
+            <select>
+                <option value="Nej" selected>Nej</option>
+        
+                <option value="Nissan Haidu">Nissan Haidu</option>
+                <option value="Toyota Halleluia">Toyota Halleluia</option>
+                <option value="Mercedes G8T23">Mercedes G8T23</option>   
+            </select> <br><br>
+            <label for="roomtype" name="roomtype">Val av rum:</label>
+            <select>
+                <option value="Enkelrum" selected>Enkelrum</option>
+                <option value="Dubbelrum">Dubbelrum</option>
+                <option value="Svit">Svit</option>
+                <option value="VIP">Vip-svit</option>   
+            </select> <br><br>
+        </fieldset><br>
+
+        <fieldset>
+            <legend>Betalning</legend>
+            <label for="cardtype">Välj korttyp:</label><br>
+            <label for="Mastercard">Mastercard</label>
+            <input type="radio" name="cardtype" id="Mastercard" value="Mastercard"><br>
+            <label for="VISA">VISA</label>
+            <input type="radio" name="cardtype" id="VISA" value="VISA"><br>
+            <label for="American_Express">American Express</label>
+            <input type="radio" name="cardtype" id="American_Express" value="American Express"><br><br>
+            <label for="cardnumber">Var vänlig ange ditt kortnummer</label><br>
+            <input type="text" id="cardnumber" name="cardnumber" minlength="16" maxlength="16>"><br>
+         </fieldset><br><br>
+   
+         <div class="submitbutton">
+            <input type="submit" value="Skicka dina uppgifter!">
+         </div>
+         
+    </form>
+
+
+    <script>
+    
+        function SetLimitForDeparture(date){
+            var datum = document.getElementById("departuredate");
+            datum.setAttribute("min", date);
+        }
+
+    </script>
+
+</body>
+</html>

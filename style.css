@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+    margin:0; 
+    padding:0; 
+}
+
+body{
+   
+    text-align: center;
+    background-image:linear-gradient(rgba(5, 52, 5, 0.87),rgba(126, 34, 72, 0.476));
+    display: flex;
+    flex-direction: column;
+}
+
+body .header{
+    margin:auto;
+    margin-top:50px;
+    background-image: url(wallpapersden.com_hotel-balcony-porch_2560x1440.jpg); 
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size:cover;
+    outline:10px groove rgba(196, 229, 213, 0.2);
+    border-radius: 150px;
+    max-width: 600px;
+    max-height: 200px;
+    min-height: 200px;
+    min-width:80%;
+    background-color: lightcoral;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:3em;
+}
+
+
+
+.greeting{
+    margin:20px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+form{
+    display:flex;
+    justify-content:center;
+    flex-flow:row wrap;
+    font-family:Garamond;
+}
+fieldset{
+    display:inline-block;
+    font-size: 25px;
+    width:50%;
+    text-align: left;
+    padding:30px;
+    border:1px solid lightcoral;
+    border-radius: 50px;
+    margin:15px;
+}
+fieldset legend{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:rgb(30, 27, 27);
+    
+}
+
+.submitbutton{
+    display: block;
+    width:100%;
+    margin:50px;
+    
+}
+
+h1{
+   
+    font-family: Garamond, serif;
+    font-size: 60px;    
+    color:white;
+    text-shadow: 5px 5px 5px violet;
+    text-shadow: -2px 0 black, -2px 0 black, -2px 0 black, -2px 2px black, 5px 5px 5px rgb(74, 72, 74) ;
+}
+.submitbutton{
+    margin-top:30px;
+    min-width: 40px;
+    min-height:50px;
+   font-size: 30px;
+  
+}
+
+.submitbutton input{
+    min-width: 50px;
+    min-height:30px;
+    font-size: 30px;
+    background-color:salmon;
+    border:none;
+    border-radius: 50px;
+    box-shadow: 1px 1px 8px rgb(155, 25, 116) ;
+    font-family:Garamond;
+    padding:20px;
+}
